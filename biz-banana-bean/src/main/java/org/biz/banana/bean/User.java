@@ -9,25 +9,35 @@ import java.io.Serializable;
 public class User implements Serializable
 {
 	private static final long serialVersionUID = 1L;
-	private Long id;
-    private String userName;
+	private Integer id;
+	private String name;
+	private Integer age;
     public User(){}
     
-    public User(Long id, String userName){
-    	this.id = id;
-    	this.userName = userName;
-    }
-    
-	public Long getId() {
+	public User(Integer id, String name, Integer age) {
+		this.id = id;
+		this.name = name;
+		this.age = age;
+	}
+
+	public Integer getId() {
 		return id;
 	}
-	public void setId(Long id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
-	public String getUserName() {
-		return userName;
+	public String getName() {
+		return name;
 	}
-	public void setUserName(String userName) {
-		this.userName = userName;
+	public void setName(String name) {
+		this.name = name;
 	}
+	public Integer getAge() {
+		return age;
+	}
+	public void setAge(Integer age) {
+		this.age = age;
+	}
+    
+    
 }

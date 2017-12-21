@@ -14,4 +14,6 @@ public interface UserService
 	 *查找用户信息 
 	 */
 	public List<User> findList();
+	
+	public void addUser();
 }

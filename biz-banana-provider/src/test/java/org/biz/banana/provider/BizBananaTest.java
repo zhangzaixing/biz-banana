@@ -22,7 +22,8 @@ public class BizBananaTest {
 	@Test
 	public void start() {
 		try {
-			userService.addUser();
+			
+			//userService.addUser();
 			System.in.read();
 		} catch (IOException e) {
 			e.printStackTrace();

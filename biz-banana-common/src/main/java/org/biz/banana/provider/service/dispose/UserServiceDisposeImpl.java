@@ -5,6 +5,13 @@ import org.springframework.stereotype.Service;
 
 import com.appleframework.model.Dto;
 
+/**
+ * 
+ *UserServiceDisposeImpl class
+ *
+ *@author zzx
+ *@date 2017年12月26日 上午10:07:56
+ */
 @Service("topic_demo3")
 public class UserServiceDisposeImpl implements BaseServiceDispose {
 

@@ -3,8 +3,11 @@ package org.biz.banana.bean;
 import java.io.Serializable;
 
 /**
- * Hello world!
+ * 
+ *User class
  *
+ *@author zzx
+ *@date 2017年12月26日 上午10:07:43
  */
 public class User implements Serializable
 {

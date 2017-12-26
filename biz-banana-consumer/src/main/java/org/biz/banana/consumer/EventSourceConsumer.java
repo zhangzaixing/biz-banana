@@ -12,6 +12,13 @@ import com.appleframework.model.Dto;
 
 import kafka.message.MessageAndMetadata;
 
+/**
+ * 
+ *EventSourceConsumer class
+ *
+ *@author zzx
+ *@date 2017年12月26日 上午10:08:52
+ */
 public class EventSourceConsumer extends MessageAndMetadataConsumer {
 
 	protected final static Logger logger = Logger.getLogger(EventSourceConsumer.class);

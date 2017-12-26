@@ -10,10 +10,17 @@ import org.biz.banana.service.UserService;
 import org.springframework.core.task.TaskExecutor;
 import org.springframework.stereotype.Service;
 
+/**
+ * 
+ *UserServiceImpl class
+ *
+ *@author zzx
+ *@date 2017年12月26日 上午10:08:05
+ */
 @Service("userService")
 public class UserServiceImpl implements UserService{
 	@Resource
-	private TaskExecutor TaskExecutor;
+	private TaskExecutor taskExecutor;
 	
 	@Override
 	public List<User> findList() {
@@ -29,7 +36,7 @@ public class UserServiceImpl implements UserService{
 		Long startTime = System.currentTimeMillis();
 		System.out.println("开始");
 		AsynThreadTest test = new AsynThreadTest();
-		TaskExecutor.execute(test);
+		taskExecutor.execute(test);
 		System.out.println("结束耗时：" + (System.currentTimeMillis() - startTime));
 	}
 

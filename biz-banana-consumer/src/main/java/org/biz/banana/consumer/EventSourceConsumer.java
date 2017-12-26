@@ -31,14 +31,14 @@ public class EventSourceConsumer extends MessageAndMetadataConsumer {
 			Object object = ByteUtils.fromByte(message.message());
 			if(object instanceof Dto) {
 				Dto data = (Dto)object;
-				ChatEventHandleBus.handle(topic, data);
+				BananaEventHandleBus.handle(topic, data);
 			} else if(object instanceof HashMap) {
 				Map<String, Object> data = (Map<String, Object>)object;
 				Dto dto = new DefaultDto();
 				dto.addParameters(data);
-				ChatEventHandleBus.handle(topic, dto);
+				BananaEventHandleBus.handle(topic, dto);
 			} else {
-				ConsumerProcess.process(topic, object);
+				StreamProcessImpl.process(topic, object);
 			}
 		} catch (Exception e) {
 			e.printStackTrace();

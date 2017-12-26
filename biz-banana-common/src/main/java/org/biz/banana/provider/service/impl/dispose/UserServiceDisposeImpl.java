@@ -1,4 +1,4 @@
-package org.biz.banana.provider.service.dispose;
+package org.biz.banana.provider.service.impl.dispose;
 
 import org.biz.banana.provider.service.BaseServiceDispose;
 import org.springframework.stereotype.Service;
@@ -17,7 +17,7 @@ public class UserServiceDisposeImpl implements BaseServiceDispose {
 
 	@Override
 	public Dto dispose(Dto dto) {
-		Long userId = (Long)dto.get("userId");
+		Integer userId = (Integer)dto.get("userId");
 		String name = (String)dto.get("name");
 		Integer age = (Integer)dto.get("age");
 		System.out.println("userId:" + userId +",name:"+name+",age:"+age);

@@ -12,7 +12,7 @@ import com.appleframework.model.Dto;
  *@author zzx
  *@date 2017年12月26日 上午10:08:35
  */
-public class ChatEventHandleBus {
+public class BananaEventHandleBus {
 	
 	public static void handle(String topic, Dto dto) {
 		BaseServiceDispose serviceDispose = (BaseServiceDispose)SpringUtility.getBean(topic);
